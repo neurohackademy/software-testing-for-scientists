@@ -41,8 +41,8 @@ dependencies:
 ## Customize test commands
 test:
   override:
-    - Rscript age_demean.R participants.tsv
-    - Rscript age_demean.R participants2.tsv
+    - Rscript demean_age.R participants.tsv
+    - Rscript demean_age.R participants2.tsv
 ```
 
 Commit all changes and see the tests run on CircleCI.
