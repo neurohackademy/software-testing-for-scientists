@@ -1,0 +1,22 @@
+---
+title: "Adding assertion tests"
+teaching: 10
+exercises: 0
+questions:
+- "Can I add assertion statements in my code?"
+objectives:
+- "Learn how to increase the quality of your code with assertions"
+keypoints:
+- "Assertions combined with smoke tests are an easy way to test your software"
+---
+
+## Adding assertions
+
+Add the following lines after mean age calculation in your R script:
+```
+stopifnot(mean_age < 100)
+stopifnot(mean_age > 10)
+```
+Commit, push and check out CircleCI.
+
+Do your tests still pass?
