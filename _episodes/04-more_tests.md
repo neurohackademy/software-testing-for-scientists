@@ -17,6 +17,7 @@ Copy the `participants.tsv` file to `participants2.tsv` and modify ages of a few
 ## Modifying the script to take command line arguments
 
 Make your script read the data path from the command line:
+
 ```
 args <- commandArgs(trailingOnly = TRUE)
 
