@@ -1,6 +1,6 @@
 ---
 title: "Adding assertion tests"
-teaching: 
+teaching:
 exercises: 10
 questions:
 - "Can I add assertion statements in my code?"
@@ -13,6 +13,7 @@ keypoints:
 ## Adding assertions
 
 Add the following lines after mean age calculation in your R script:
+
 ```
 stopifnot(mean_age < 100)
 stopifnot(mean_age > 10)
