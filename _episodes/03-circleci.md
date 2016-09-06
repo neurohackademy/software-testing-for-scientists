@@ -13,6 +13,7 @@ keypoints:
 ### Configuring tests for your repository
 
 For CircleCI to know what tests to run we need to add a `circle.yml` file with the following content to our repository,
+
 ```
 ## Customize dependencies
 dependencies:
