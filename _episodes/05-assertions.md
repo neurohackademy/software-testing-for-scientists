@@ -1,7 +1,7 @@
 ---
 title: "Adding assertion tests"
-teaching: 10
-exercises: 0
+teaching: 
+exercises: 10
 questions:
 - "Can I add assertion statements in my code?"
 objectives:

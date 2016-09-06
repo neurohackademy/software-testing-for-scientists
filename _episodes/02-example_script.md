@@ -1,7 +1,7 @@
 ---
 title: "Creating an example script."
-teaching: 10
-exercises: 0
+teaching: 
+exercises: 10
 questions:
 - "How do I know my code runs?"
 objectives:

@@ -1,7 +1,6 @@
 ---
-title: "Installing Docker"
+title: "Introduction to testing"
 teaching: 5
-exercises: 10
 questions:
 - "How do I avoid having to retract my paper due to a software error?"
 objectives:
