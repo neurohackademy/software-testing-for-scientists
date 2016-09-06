@@ -26,9 +26,11 @@ test:
 ```
 
 When this file is added and pushed to GitHub we can go to CircleCI.com:
+
 1. Log in on CircleCI (using your GitHub account)
 2. From the Dashboard click "Add projects" and find your repository
 3. See how your tests run
 
 Tasks:
+
 1. Can you break your script and see if the test fails?

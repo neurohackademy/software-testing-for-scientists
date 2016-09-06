@@ -1,6 +1,6 @@
 ---
 title: "Creating an example script."
-teaching: 
+teaching:
 exercises: 10
 questions:
 - "How do I know my code runs?"
@@ -10,7 +10,7 @@ keypoints:
 - "Running things manually does not scale."
 ---
 
-## What is Docker?
+## Setting up an example
 
 1. Create a new repository on github
 2. Clone it to your computer
