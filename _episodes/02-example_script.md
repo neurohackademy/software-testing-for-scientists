@@ -14,20 +14,21 @@ keypoints:
 
 1. Create a new repository on github
 2. Clone it to your computer
-3. Inside create a demean_age.R file
+3. Inside create a demean_age.py file
 
 ```
-demographics <- read.csv(file='participants.tsv', head=TRUE, sep="\t")
-age <- demographics[4]
-mean_age <- sum(age)/length(age)
-demean_age <- age - mean_age
+import numpy as np
 
-write.table(demean_age, file="age_demeaned.tsv", row.names=FALSE, col.names=FALSE, sep="\t")
+age = np.loadtxt("participants.tsv", skiprows=1, usecols=3)
+
+mean_age = sum(age)/len(age)
+
+np.savetxt("demeaned_age.txt", age-mean_age)
 
 print("done!")
 ```
 
-4. Download [this data file](https://gist.githubusercontent.com/chrisfilo/95d01249ecdf80e850bc8e08ac8f61c6/raw/1773e78e54b082c7f8ed0a06ddc586d426330d5e/participants.tsv) and put it next to the .R file
+4. Download [this data file](https://gist.githubusercontent.com/chrisfilo/95d01249ecdf80e850bc8e08ac8f61c6/raw/1773e78e54b082c7f8ed0a06ddc586d426330d5e/participants.tsv) and put it next to the .py file
 
 Tasks:
 

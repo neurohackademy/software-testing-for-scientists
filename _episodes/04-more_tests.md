@@ -19,14 +19,14 @@ Copy the `participants.tsv` file to `participants2.tsv` and modify ages of a few
 Make your script read the data path from the command line:
 
 ```
-args <- commandArgs(trailingOnly = TRUE)
+import sys
+import numpy as np
 
-demographics <- read.csv(file=args[1], head=TRUE, sep="\t")
+age = np.loadtxt(sys.argv[1], skiprows=1, usecols=3)
 
-age <- demographics[4]
-demean_age <- age - sum(age)/length(age)
+mean_age = sum(age)/len(age)
 
-write.table(demean_age, file="age_demeaned.tsv", row.names=FALSE, col.names=FALSE, sep="\t")
+np.savetxt("demeaned_" + sys.argv[1], age-mean_age)
 
 print("done!")
 ```
@@ -34,15 +34,27 @@ print("done!")
 ## Modify the circle config to include both tests
 
 ```
-## Customize dependencies
-dependencies:
-  pre:
-    - sudo apt-get update && sudo apt-get -y install r-base
-## Customize test commands
-test:
-  override:
-    - Rscript demean_age.R participants.tsv
-    - Rscript demean_age.R participants2.tsv
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3.6.1
+    steps:
+      - checkout
+      - run:
+          name: Install Python deps in a virtual environment
+          command: |
+            python3 -m venv myenv
+            . myenv/bin/activate
+            pip install numpy
+      - run:
+          command: |
+            . myenv/bin/activate
+            python demean_age.py participants.tsv
+      - run:
+          command: |
+            . myenv/bin/activate
+            python demean_age.py participants2.tsv
 ```
 
 Commit all changes and see the tests run on CircleCI.

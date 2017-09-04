@@ -12,7 +12,7 @@ keypoints:
 
 ## Adding assertions
 
-Add the following lines after mean age calculation in your R script:
+Add the following lines after mean age calculation in your Python script:
 
 ```
 stopifnot(mean_age < 100)
