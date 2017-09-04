@@ -15,8 +15,8 @@ keypoints:
 Add the following lines after mean age calculation in your Python script:
 
 ```
-stopifnot(mean_age < 100)
-stopifnot(mean_age > 10)
+assert mean_age < 100
+assert mean_age > 10 
 ```
 Commit, push and check out CircleCI.
 
